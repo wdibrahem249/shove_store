@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أحذية ماركات أصلية - جوردن 1، جوردن 4، أديداس، بالينسياجا</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👟</text></svg>">
+</head>
+<body>
+    <!-- رأس الصفحة -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="cart-icon">
+                    <a href="#" id="cart-toggle">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <div class="logo">
+                    <img src="shvse.logo.jpeg" alt="شعار متجر أحذية ماركات" class="logo-img">
+                </div>
+                
+                <div class="menu-icon">
+                    <button id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                
+                <!-- قائمة التنقل -->
+                <div class="nav-menu" id="nav-menu">
+                    <button class="close-menu" id="close-menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul>
+                        <li><a href="#" class="nav-link active" data-category="all">الرئيسية</a></li>
+                        <li><a href="#" class="nav-link" data-category="jordan1">جوردن 1</a></li>
+                        <li><a href="#" class="nav-link" data-category="jordan4">جوردن 4</a></li>
+                        <li><a href="#" class="nav-link" data-category="adidas">أديداس</a></li>
+                        <li><a href="#" class="nav-link" data-category="balenciaga">بالينسياجا</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- محتوى الصفحة الرئيسية -->
+    <main>
+        <!-- قسم الترحيب -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                   
+                    <p>اكتشف تشكيلتنا الحصرية من أحذية جوردن 1، جوردن 4، أديداس، وبالينسياجا. جودة عالية وأسعار تنافسية مع ضمان الأصالة.</p>
+                    <a href="#products" class="btn">تصفح المنتجات</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80" alt="أحذية رياضية">
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المنتجات -->
+        <section class="products-section" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>أحذيتنا المميزة</h2>
+                    <p>اختر من بين أفضل ماركات الأحذية العالمية</p>
+                </div>
+                
+                <!-- مرشحات المنتجات -->
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="jordan1">جوردن 1</button>
+                    <button class="filter-btn" data-filter="jordan4">جوردن 4</button>
+                    <button class="filter-btn" data-filter="adidas">أديداس</button>
+                    <button class="filter-btn" data-filter="balenciaga">بالينسياجا</button>
+                </div>
+                
+                <!-- قائمة المنتجات -->
+                <div class="products-grid" id="products-grid">
+                    <!-- سيتم ملء المنتجات ديناميكيًا باستخدام JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- سلة التسوق -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة التسوق</h3>
+            <button class="close-cart" id="close-cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cart-items">
+            <!-- سيتم ملء عناصر السلة ديناميكيًا -->
+            <p class="empty-cart-message">سلة التسوق فارغة</p>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>المجموع:</span>
+                <span class="total-price">0.00 ر.س</span>
+            </div>
+            <button class="btn checkout-btn" id="checkout-btn">إتمام الشراء</button>
+            <button class="btn continue-shopping" id="continue-shopping">مواصلة التسوق</button>
+        </div>
+    </div>
+
+    <!-- نموذج الطلب -->
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>إتمام الطلب</h3>
+                <button class="close-modal" id="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="name">الاسم بالكامل *</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف *</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">عنوان التوصيل *</label>
+                    <textarea id="address" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="size">المقاس *</label>
+                    <select id="size" required>
+                        <option value="">اختر المقاس</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">ملاحظات إضافية (اختياري)</label>
+                    <textarea id="notes" rows="2" placeholder="أي ملاحظات حول الطلب..."></textarea>
+                </div>
+                
+                <div class="order-summary">
+                    <h4>ملخص الطلب</h4>
+                    <div id="order-summary">
+                        <!-- سيتم ملء ملخص الطلب ديناميكيًا -->
+                    </div>
+                </div>
+                
+                <div class="payment-method">
+                    <p><i class="fas fa-info-circle"></i> الدفع عند الاستلام فقط</p>
+                </div>
+                
+                <button type="submit" class="btn submit-order-btn">إرسال الطلب عبر واتساب</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- قسم المنتجات المقترحة -->
+    <div class="suggested-products" id="suggested-products">
+        <h3>قد يعجبك أيضًا</h3>
+        <div class="suggested-grid">
+            <!-- سيتم ملء المنتجات المقترحة ديناميكيًا -->
+        </div>
+    </div>
+
+    <!-- تذييل الصفحة -->
+    <footer class="footer">
+        <div class="container">
+            <!-- روابط التواصل الاجتماعي -->
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-snapchat"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            
+            <!-- معلومات الاتصال -->
+            <div class="contact-info" id="contact">
+                <p><i class="fas fa-phone"></i> 0123456789</p>
+                <p><i class="fas fa-envelope"></i> info@shoestore.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> شحن جميع المحافظات</p>
+            </div>
+            
+            <!-- حقوق النشر -->
+            <div class="copyright">
+                <p>© 2023 أحذية ماركات أصلية. جميع الحقوق محفوظة.</p>
+               
+            </div>
+        </div>
+    </footer>
+
+    <!-- النص الجانبي للواتساب -->
+    <a href="#" class="whatsapp-float" id="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+</html>
